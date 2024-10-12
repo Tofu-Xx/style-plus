@@ -1,7 +1,7 @@
 {
 	"name": "style-plus",
 	"type": "module",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"packageManager": "pnpm@9.9.0",
 	"description": "Enhance the style attribute to make CSS and HTML deeply integrated.\n增强style属性，让css和html深度融合。",
 	"author": "tofu-xx <<tofu-xx@foxmail.com>>",
@@ -21,7 +21,7 @@
 		}
 	},
 	"files": [
-		"dist"
+		"main.js"
 	],
 	"scripts": {
 		"release": "bumpp -no-push && pnpm publish"
