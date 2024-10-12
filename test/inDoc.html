@@ -1,14 +1,24 @@
 <head>
   <script src="https://unpkg.com/style-plus@latest"></script>
 </head>
+
 <body>
-  <ul style="&>li{ 
+  <button onclick="add()">add li</button>
+  <ul id="list" style="&>li{ 
     color:blue;
     &:hover{
-      color:red;
+      color:red !important;
     }
   }">
     <li>1</li>
     <li>2</li>
   </ul>
+  <script>
+    function add() {
+      const li = document.createElement('li');
+      li.textContent = list.children.length + 1;
+      li.setAttribute('style', '&{color:green}');
+      list.appendChild(li);
+    }
+  </script>
 </body>
