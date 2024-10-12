@@ -7,15 +7,15 @@
   <b>简体中文</b> | <a href="./README.zh-CN.md">English</a>
 </p>
 
-## precondition
-Browser support [CSS nesting](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_nesting/Using_CSS_nesting)
+## 前置条件
+浏览器支持[CSS嵌套](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_nesting/Using_CSS_nesting)
 
-## style of writing
+## 写法
 ```html
 <div style="&{ <CSS 嵌套语法> }"/>
 ```
 
-## example
+## 例子
 ```html
 <ul style="&>li{ 
   color:blue;
@@ -28,7 +28,7 @@ Browser support [CSS nesting](https://developer.mozilla.org/zh-CN/docs/Web/CSS/C
 </ul>
 ```
 
-## install
+## 安装
 
 ```html
 <script src="https://unpkg.com/style-plus"></script>
