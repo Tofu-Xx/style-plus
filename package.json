@@ -24,6 +24,6 @@
 		"dist"
 	],
 	"scripts": {
-		"release": "bumpp && pnpm publish"
+		"release": "bumpp -no-push && pnpm publish"
 	}
 }
