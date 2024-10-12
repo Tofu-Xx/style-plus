@@ -25,5 +25,9 @@
 	],
 	"scripts": {
 		"release": "bumpp -no-push && pnpm publish"
+	},
+	"publishConfig": {
+		"registry": "https://registry.npmjs.org/",
+		"access": "public"
 	}
 }
