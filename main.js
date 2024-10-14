@@ -22,7 +22,7 @@ new MutationObserver(mutations => {
       if (node.nodeType !== Node.ELEMENT_NODE) continue;
       // @ts-ignore
       const style = node?.getAttribute('style');
-      if (!style.trim().startsWith('&')) continue;
+      if (!style?.trim().startsWith('&')) continue;
       // @ts-ignore
       node.removeAttribute('style');
       const css = style.replace('&', getSelector(node));
