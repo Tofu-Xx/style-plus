@@ -27,7 +27,6 @@ new MutationObserver(mutations => {
       node.removeAttribute('style');
       const css = style.replace('&', getSelector(node));
       if (csss.has(css)) continue;
-      console.log(css);
       csss.add(css);
       styleEl.innerHTML += css;
     }
