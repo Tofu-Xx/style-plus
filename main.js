@@ -7,21 +7,31 @@ const getSelector = (el) => {
       break;
     }
     const siblings = [...el.parentNode.children];
-    const nth = `:nth-child(${1 + siblings.indexOf(el)})` 
+    const nth = `:nth-child(${1 + siblings.indexOf(el)})`;
     path.unshift(tag + nth);
   };
   return `${path.join(' > ')}`.toLowerCase();
 };
-document.addEventListener('DOMContentLoaded', () => {
-  const els = document.querySelectorAll('[style*="&"][style*="{"][style*="}"]');
-  let css = '';
-  els.forEach(el => {
-    const style = el.getAttribute('style');
-    if (!style?.trim().startsWith('&')) return;
-    const selector = getSelector(el);
-     css +=  style.replace('&', selector);
-  });
-  const styleEl = document.createElement('style');
-  styleEl.innerHTML = css;
-  document.head.appendChild(styleEl);
-})
+
+const styleEl = document.createElement('style');
+document.head.appendChild(styleEl);
+const csss = new Set();
+new MutationObserver(mutations => {
+  for (const mutation of mutations) {
+    for (const node of mutation.addedNodes) {
+      if (node.nodeType!== Node.ELEMENT_NODE) continue;
+      // @ts-ignore
+      const css = node?.getAttribute('style')?.replace('&', getSelector(node));
+      if (!css) continue;
+      if (csss.has(css)) continue;
+      console.log(css);
+      csss.add(css);
+      styleEl.innerHTML += css;
+    }
+  }
+}).observe(document.documentElement, {
+  subtree: true,
+  attributes: true,
+  attributeFilter: ['style'],
+  childList: true,
+});
