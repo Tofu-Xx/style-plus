@@ -19,10 +19,13 @@ const csss = new Set();
 new MutationObserver(mutations => {
   for (const mutation of mutations) {
     for (const node of mutation.addedNodes) {
-      if (node.nodeType!== Node.ELEMENT_NODE) continue;
+      if (node.nodeType !== Node.ELEMENT_NODE) continue;
       // @ts-ignore
-      const css = node?.getAttribute('style')?.replace('&', getSelector(node));
-      if (!css) continue;
+      const style = node?.getAttribute('style');
+      if (!style.trim().startsWith('&')) continue;
+      // @ts-ignore
+      node.removeAttribute('style');
+      const css = style.replace('&', getSelector(node));
       if (csss.has(css)) continue;
       console.log(css);
       csss.add(css);
