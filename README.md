@@ -17,7 +17,7 @@ Browser support [CSS nesting](https://developer.mozilla.org/zh-CN/docs/Web/CSS/C
 
 ## example
 ```html
-<ul style="&>li{ 
+<ul style="&>li{
   color:blue;
   &:hover{
     color:red;
