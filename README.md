@@ -23,17 +23,14 @@ Browser support for [CSS nesting](https://developer.mozilla.org/en-US/docs/Web/C
 
 ```html
 <ul
-  style="
-    & > li {
-      color: blue;
-      &:hover {
-        color: red;
-      }
+  style="& > li {
+    color: blue;
+    &:hover {
+      color: red;
     }
-  "
->
+  }">
   <li>1</li>
-  <li>2</li>
+  ...
 </ul>
 ```
 
