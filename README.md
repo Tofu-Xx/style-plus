@@ -18,13 +18,12 @@ Browser support for [CSS nesting](https://developer.mozilla.org/en-US/docs/Web/C
 ## Example
 
 ```html
-<ul
-  style="& > li {
+<ul style="& > li {
     color: blue;
     &:hover {
       color: red;
     }
-  }">
+}">
   <li>1</li>
   ...
 </ul>

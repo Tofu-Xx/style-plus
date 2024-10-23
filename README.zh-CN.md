@@ -18,13 +18,12 @@
 ## 例子
 
 ```html
-<ul
-  style="& > li {
+<ul style="& > li {
     color: blue;
     &:hover {
       color: red;
     }
-  }">
+}">
   <li>1</li>
   ...
 </ul>
