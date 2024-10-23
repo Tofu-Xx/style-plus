@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.2.0",
   "packageManager": "pnpm@9.12.1",
-  "description": "Enhance the style attribute to make CSS and HTML deeply integrated.\n增强style属性，让css和html深度融合。",
+  "description": "Enhanced style attribute, supporting CSS nesting syntax | 增强style属性，支持CSS嵌套语法",
   "author": "tofu-xx <tofu-xx@foxmail.com>",
   "license": "MIT",
   "funding": "https://github.com/sponsors/tofu-xx",
