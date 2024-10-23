@@ -1,16 +1,24 @@
 function getSelector(el) {
   const path = []
-  for (el; el.parentNode; el = el.parentNode) {
-    const tag = el.tagName
+  while (el && el.nodeType === Node.ELEMENT_NODE) {
+    let selector = el.tagName.toLowerCase()
     if (el.id) {
-      path.unshift(`#${el.id}`)
+      selector = `#${el.id}`
+      path.unshift(selector)
       break
     }
-    const siblings = [...el.parentNode.children]
-    const nth = `:nth-child(${1 + siblings.indexOf(el)})`
-    path.unshift(tag + nth)
-  };
-  return `${path.join(' > ')}`.toLowerCase()
+    if (el.className) {
+      selector += `.${el.className.trim().replace(/\s+/g, '.')}`
+    }
+    const siblings = el.parentNode ? [...el.parentNode.children].filter(child => child.tagName === el.tagName) : []
+    if (siblings.length > 1) {
+      const index = siblings.indexOf(el) + 1
+      selector += `:nth-of-type(${index})`
+    }
+    path.unshift(selector)
+    el = el.parentNode
+  }
+  return path.join(' > ')
 }
 
 const styleEl = document.createElement('style')
@@ -21,11 +29,9 @@ new MutationObserver((mutations) => {
     for (const node of mutation.addedNodes) {
       if (node.nodeType !== Node.ELEMENT_NODE)
         continue
-      // @ts-ignore
       const style = node?.getAttribute('style')
       if (!style?.trim().startsWith('&'))
         continue
-      // @ts-ignore
       node.removeAttribute('style')
       const css = style.replace('&', getSelector(node))
       if (csss.has(css))
