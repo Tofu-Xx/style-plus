@@ -1,25 +1,15 @@
 ;(() => {
   function getSelector(el) {
-    const path = []
+    let path
     while (el && el.nodeType === Node.ELEMENT_NODE) {
-      let selector = el.tagName.toLowerCase()
-      if (el.id) {
-        selector = `#${el.id}`
-        path.unshift(selector)
-        break
-      }
-      if (el.className) {
-        selector += `.${el.className.trim().replace(/\s+/g, '.')}`
-      }
+      let tagName = el.tagName.toLowerCase()
       const siblings = el.parentNode ? [...el.parentNode.children].filter(child => child.tagName === el.tagName) : []
-      if (siblings.length > 1) {
-        const index = siblings.indexOf(el) + 1
-        selector += `:nth-of-type(${index})`
-      }
-      path.unshift(selector)
+      const index = siblings.indexOf(el) + 1
+      tagName += `:nth-of-type(${index})`
+      path = tagName + (path ? `>${path}` : '')
       el = el.parentNode
     }
-    return path.join(' > ')
+    return path
   }
 
   const csss = new Set()
@@ -35,7 +25,9 @@
         if (!style?.trim().startsWith('&'))
           continue
         node.removeAttribute('style')
-        const css = style.replace('&', getSelector(node))
+        const selector = getSelector(node)
+        console.log(selector)
+        const css = style.replace('&', selector)
         if (csss.has(css))
           continue
         csss.add(css)

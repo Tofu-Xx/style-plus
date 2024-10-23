@@ -3,11 +3,13 @@
 </head>
 
 <body>
-  <button onclick="this.innerText++" style="&{background-color:azure;}">0</button>
-  <button onclick="this.innerText++" style="background-color: azure;&:hover{color:red}">0</button>
+  <button id="btn" onclick="this.innerText++" style="&{background-color:azure;}">0</button>
 </body>
 
 <style>
+  #btn {
+    background-color: red;
+  }
   [onclick] {
     background-color: aqua;
   }
