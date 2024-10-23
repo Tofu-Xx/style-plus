@@ -1,28 +1,44 @@
 <head>
   <script src="../main.js"></script>
-   <!-- <script src="https://unpkg.com/style-plus"></script> -->
+  <!-- <script src="https://unpkg.com/style-plus"></script> -->
 </head>
+
 <body>
   <div style="&{
     width: 600px;
     margin: 0 auto;
-    background: #f2f2f2;
-    h1 {
+    background-color: beige;
+    display: flex;
+    flex-direction: column;
+    &::before {
+      content: 'Welcome to style-plus';
       text-align: center;
-      &:hover {
-        color: tomato;
-      }
+      font-size: 20px;
     }
   }">
-    <h1>Welcome to my website</h1>
     <ul style="& li{
         display: inline-block;
         margin: 10px;
         padding: 10px;
     }">
-      <li style="color:tomato;">Item 1</li>
+      <li>Item 1</li>
       <li>Item 2</li>
       <li>Item 3</li>
     </ul>
+    <a href="#" style="&{
+      text-align: right;
+      &:link {
+        color: black;
+      }
+      &:visited {
+        color: gray;
+      }
+      &:hover {
+      color: tomato;
+      }
+      &:active {
+        color: teal;
+      }
+    }">a link</a>
   </div>
 </body>
