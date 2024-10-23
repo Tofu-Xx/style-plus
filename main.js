@@ -25,9 +25,7 @@
         if (!style?.trim().startsWith('&'))
           continue
         node.removeAttribute('style')
-        const selector = getSelector(node)
-        console.log(selector)
-        const css = style.replace('&', selector)
+        const css = style.replace('&', getSelector(node))
         if (csss.has(css))
           continue
         csss.add(css)
