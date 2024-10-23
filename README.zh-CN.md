@@ -1,6 +1,6 @@
 <h1 align=center>style-plus</h1>
 <p align=center>
-  <b>简体中文</b> | <a href="./README.zh-CN.md">English</a>
+  <b>简体中文</b> | <a href="./README.md">English</a>
 </p>
 
 > 增强style属性，支持CSS嵌套语法
