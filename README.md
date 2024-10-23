@@ -1,6 +1,6 @@
 <h1 align=center>style-plus</h1>
 <p align=center>
-  <b>简体中文</b> | <a href="./README.zh-CN.md">English</a>
+  <a href="./README.zh-CN.md">简体中文</a> | <b>English</b>
 </p>
 
 > Enhanced style attribute, supporting CSS nesting syntax
