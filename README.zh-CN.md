@@ -1,8 +1,4 @@
-<h1>
-  <p align=center>
-    style-plus
-  </p>
-</h1>
+<h1 align=center>style-plus</h1>
 <p align=center>
   <b>简体中文</b> | <a href="./README.zh-CN.md">English</a>
 </p>
