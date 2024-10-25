@@ -2,7 +2,7 @@
   "name": "style-plus",
   "type": "module",
   "version": "0.2.0",
-  "packageManager": "pnpm@9.12.1",
+  "packageManager": "pnpm@9.12.2",
   "description": "Enhanced style attribute, supporting CSS nesting syntax | 增强style属性，支持CSS嵌套语法",
   "author": "tofu-xx <tofu-xx@foxmail.com>",
   "license": "MIT",
@@ -35,9 +35,9 @@
     "access": "public"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^3.7.3",
+    "@antfu/eslint-config": "^3.8.0",
     "bumpp": "^9.7.1",
-    "eslint": "^9.12.0",
+    "eslint": "^9.13.0",
     "eslint-plugin-format": "^0.1.2",
     "taze": "^0.17.2"
   }

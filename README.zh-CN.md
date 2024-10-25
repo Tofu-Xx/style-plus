@@ -19,10 +19,10 @@
 
 ```html
 <ul style="& > li {
-    color: blue;
-    &:hover {
-      color: red;
-    }
+  color: blue;
+  &:hover {
+    color: red;
+  }
 }">
   <li>1</li>
   ...
