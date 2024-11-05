@@ -3,40 +3,23 @@
   <a href="./README.zh-CN.md">简体中文</a> | <b>English</b>
 </p>
 
-> Enhanced style attribute, supporting CSS nesting syntax
-
-## Prerequisites
-
-Browser support for [CSS nesting](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_nesting/Using_CSS_nesting)
-
-## Usage
-
-```html
-<div style="&{ <CSS nesting syntax> }" />
-```
+Enhanced style attribute, supporting [CSS nesting](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_nesting/Using_CSS_nesting) syntax
+This means that you can write CSS selectors in inline styles
 
 ## Example
-
 ```html
-<ul style="& > li {
-  color: blue;
-  &:hover {
-    color: red;
-  }
-}">
+<ul style="display: flex;li{flex: 1}">
   <li>1</li>
-  ...
+  <li>2</li>
+  <li>3</li>
 </ul>
 ```
 
-## Installation
-
+## Usage
 ```html
 <script src="https://unpkg.com/style-plus"></script>
 ```
-
 **or**
-
 ```html
 <script src="https://cdn.jsdelivr.net/npm/style-plus"></script>
 ```
