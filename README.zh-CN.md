@@ -20,6 +20,6 @@ html
 <script src="https://unpkg.com/style-plus"></script>
 ```
 **or**
-```html
-<script src="https://cdn.jsdelivr.net/npm/style-plus"></script>
+```js
+import 'https://unpkg.com/style-plus/dist/index.esm.js'
 ```

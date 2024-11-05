@@ -20,6 +20,7 @@ This means that you can write CSS selectors in inline styles
 <script src="https://unpkg.com/style-plus"></script>
 ```
 **or**
-```html
-<script src="https://cdn.jsdelivr.net/npm/style-plus"></script>
+**or**
+```js
+import 'https://unpkg.com/style-plus/dist/index.esm.js'
 ```
