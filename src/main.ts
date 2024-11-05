@@ -21,10 +21,11 @@ new MutationObserver((mutations) => {
       if (!(node instanceof Element))
         continue
       const style = node?.getAttribute('style')
-      if (!style?.trim().startsWith('&'))
+      if (!/\{|\}/.test(style))
         continue
       node.removeAttribute('style')
-      const css = style.replace('&', getSelector(node))
+      // const css = style.replace('&', getSelector(node))
+      const css = `${getSelector(node)}{${style}}`
       if (csss.has(css))
         continue
       csss.add(css)
