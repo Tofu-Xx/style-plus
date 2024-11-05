@@ -7,7 +7,7 @@ export default defineConfig({
   format: ['iife', 'esm'],
   outDir: 'dist',
   outExtension: ({ format }) => ({ js: `.${format}.js` }),
-  target: 'es3',
-  // minify: true,
+  target: 'esnext',
+  minify: true,
   dts: true,
 })
