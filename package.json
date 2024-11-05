@@ -25,6 +25,7 @@
     "main.js"
   ],
   "scripts": {
+    "build": "tsup",
     "release": "bumpp -no-push && pnpm publish",
     "up": "taze major -I",
     "lint": "eslint .",
@@ -39,6 +40,7 @@
     "bumpp": "^9.8.1",
     "eslint": "^9.14.0",
     "eslint-plugin-format": "^0.1.2",
-    "taze": "^0.18.0"
+    "taze": "^0.18.0",
+    "tsup": "^8.3.5"
   }
 }

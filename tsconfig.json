@@ -1,0 +1,113 @@
+{
+  "compilerOptions": {
+    "target": "ESNext", /* 指定TypeScript如何从给定的模块说明符中查找文件。 */
+    "module": "ESNext", /* 为发出的JavaScript设置JavaScript语言版本,并包含兼容的库声明。 */
+    "moduleResolution": "Node" /* 指定TypeScript如何从给定的模块说明符中查找文件。 */
+    // "strict": true, /*确保导入的大小写是正确的。*/
+    // "esModuleInterop": true, /*发出额外的JavaScript以简化对导入CommonJS模块的支持。这将启用‘ allowsyntheticdefaulultimports ’以实现类型兼容性。*/
+    // "forcecconsistentcasinginfilename": true, /*启用所有严格的类型检查选项。*/
+    // "skipLibCheck": true /*跳过类型检查。ts文件。*/
+    // "jsxFactory": "", /* 指定生成的模块代码。 */
+    /* 访问https://aka.ms/tsconfig阅读更多关于这个文件 */
+
+    /* 项目 */
+    // "incremental": true, /*保存.tsbuildinfo文件以允许增量编译项目。*/
+    // "composite": true, /*启用允许TypeScript项目与项目引用一起使用的约束。*/
+    // "tsBuildInfoFile":"./。/*指定.tsbuildinfo增量编译文件的路径。*/
+    // "disableSourceOfProjectReferenceRedirect": true, /*在引用复合项目时禁用首选源文件而不是声明文件。*/
+    // "disableSolutionSearching": true, /*在编辑时选择一个项目退出多项目参考检查。*/
+    // "disableReferencedProjectLoad": true, /*减少TypeScript自动加载的项目数量。*/
+
+    /* 语言和环境 */
+    // "lib":[], /*指定一组描述目标运行时环境的绑定库声明文件。*/
+    // "jsx":"preserve", /*指定生成什么jsx代码。*/
+    // "experimentalDecorators": true, /*启用对传统实验装饰器的实验支持。*/
+    // "emitDecoratorMetadata": true, /*为源文件中的装饰声明发出设计类型的元数据。*/
+
+    /* 指定生成的模块代码。 */
+    /* 设置发出的JavaScript语言版本,并包含兼容的库声明。 */
+    // "jsxFragmentFactory":"", /*指定针对React JSX发出的片段使用的JSX片段引用。的反应。"Fragment"或"Fragment"。*/
+    // "jsxImportSource":"", /*指定使用‘ JSX: react-jsx*’时导入JSX工厂函数的模块说明符。*/
+    // "reactNamespace":"", /*指定‘createElement’调用的对象。这只适用于目标‘react’ JSX emit。*/
+    // "noLib": true, /*禁用包含任何库文件,包括默认的lib. d.s。*/
+    // "useDefineForClassFields": true, /*生成符合ecmascript标准的类字段。*/
+    // "moduleDetection":"auto", /*控制使用什么方法检测模块格式的JS文件。*/
+
+    /* Modules */
+
+    /* 类型检查 */
+    // "rootDir":"。/*指定源文件中的根文件夹。*/
+    // "baseUrl":"。/", /*指定基目录来解析非相对模块名。*/
+    // "paths":{}, /*指定一组将导入重新映射到其他查找位置的项。*/
+    // "rootDirs":[], /*允许在解析模块时将多个文件夹视为一个文件夹。*/
+    // "typeRoots":[], /*指定多个类似于‘./node_modules/@types’的文件夹。*/
+    // "types":[], /*指定要包含的类型包名,而不需要在源文件中引用。*/
+    // "allowUmdGlobalAccess": true, /*允许从模块访问UMD全局变量。*/
+    // "moduleSuffixes":[], /*解析模块时要搜索的文件名后缀列表。*/
+    // "allowImportingTsExtensions": true, /*允许导入包含TypeScript文件扩展名。需要设置‘——modulerresolve bundler’和‘——noEmit’或‘——emitDeclarationOnly’。*/
+    // "resolvePackageJsonExports": true, /*使用包。解析包导入时的Json ‘exports’字段。*/
+    // "resolvePackageJsonImports": true, /*使用包。解析导入时的Json ‘imports’字段。*/
+    // "customConditions":[], /*在解析导入时除了解析器特定的默认值之外还要设置的条件。*/
+    // "noUncheckedSideEffectImports": true, /*检查副作用导入。*/
+    // "resolveJsonModule": true, /*启用导入。json文件。*/
+    // "allowArbitraryExtensions": true, /*允许导入任何扩展名的文件,前提是存在声明文件。*/
+    // "noResolve": true, /*禁止‘import’、‘require’或‘<reference>’扩展TypeScript应该添加到项目中的文件数量。*/
+
+    /* JavaScript支持 */
+    // "allowJs": true, /*允许JavaScript文件成为程序的一部分。使用‘checkJS’选项从这些文件中获取错误。*/
+    // "checkJs": true, /*在类型检查的JavaScript文件中启用错误报告。*/
+    // "maxNodeModuleJsDepth": 1, /*指定用于从‘node_modules’检查JavaScript文件的最大文件夹深度。只适用于‘allowJs’。*/
+
+    /* 发出 */
+    // "declaration": true, /*生成.d。从项目中的TypeScript和JavaScript文件中提取。*/
+    // "declarationMap": true, /*为d.ts文件创建源地图。*/
+    // "emitDeclarationOnly": true, /*只输出d.s文件而不输出JavaScript文件。*/
+    // "sourceMap": true, /*为发出的JavaScript文件创建源映射文件。*/
+    // "inlineSourceMap": true, /*在发出的JavaScript中包含源地图文件。*/
+    // "noEmit": true, /*禁止从编译中发出文件。*/
+    // "outFile":"。/", /*指定一个文件,将所有输出捆绑到一个JavaScript文件中。如果‘declaration’为true,还指定一个文件来捆绑所有的。d。ts输出。*/
+    // "outDir":"。/", /*为所有发出的文件指定一个输出文件夹*/
+    // "removeComments": true, /*禁用发出注释。*/
+    // "importthelpers": true, /*允许每个项目从tslib中导入一次helper函数,而不是每个文件包含它们。*/
+    // "downlevelIteration": true, /*为迭代生成更兼容,但冗长且性能较差的JavaScript。*/
+    // "sourceRoot":"", /*指定调试器查找参考源代码的根路径。*/
+    // "mapRoot":"", /*指定调试器应该定位地图文件的位置,而不是生成的位置。*/
+    // "inlineSources": true, /*将源代码包含在发出的JavaScript的源映射中。*/
+    // "emitBOM": true, /*在输出文件的开头发出一个UTF-8字节顺序标记（BOM）。*/
+    // "newLine":"crlf", /*设置文件的换行符。*/
+    // "stripInternal": true, /*禁止发出在JSDoc注释中带有‘@internal’的声明。*/
+    // "noEmitHelpers": true, /*禁止在编译输出中生成自定义的辅助函数,如‘__extends’。*/
+    // "noEmitOnError": true, /*如果报告任何类型检查错误,则禁用发出文件。*/
+    // "preserveConstEnums": true, /*禁用在生成的代码中删除‘const enum’声明。*/
+    // "declarationDir":"。/", /*指定生成的声明文件的输出目录。*/
+
+    /* 互操作约束 */
+    // "isolatedModules": true, /*确保每个文件都可以安全地编译,而不依赖于其他导入。*/
+    // "veratimmodulesyntax": true, /*不要转换或省略任何未标记为type-only的导入或导出,确保它们以基于‘module’设置的输出文件格式写入。*/
+    // "isolatedDeclarations": true, /*在导出文件中需要足够的注释,以便其他工具可以轻松生成声明文件。*/
+    // "allowsyntheticdefaulultimports": true, /*当模块没有默认导出时允许‘import x from y’。*/
+    // "preserveSymlinks": true, /*禁用解析符号链接到它们的真实路径。这与节点中的相同标志相关。*/
+    // "noImplicitAny": true, /*为带有隐含‘any’类型的表达式和声明启用错误报告。*/
+    // "strictNullChecks": true, /*当类型检查时,考虑‘null’和‘undefined’。*/
+    // "strictFunctionTypes": true, /*分配函数时,检查确保参数和返回值是子类型兼容的。*/
+    // "strictindcallapply": true, /*检查‘bind’, ‘call’和‘apply’方法的参数是否与原始函数匹配。*/
+    // "strictPropertyInitialization": true, /*检查已声明但未在构造函数中设置的类属性。*/
+    // "strictBuiltinIteratorReturn": true, /*内置迭代器的‘ return ’类型为‘undefined’而不是‘any’。*/
+    // "noImplicitThis": true, /*当‘this’为‘any’类型时启用错误报告。*/
+    // "useUnknownInCatchVariables": true, /*默认catch子句变量为‘unknown’而不是‘any’。*/
+    // "alwaysStrict": true, /*确保‘use strict’总是被触发。*/
+    // "noUnusedLocals": true, /*启用本地变量未被读取时的错误报告。*/
+    // "noUnusedParameters": true, /*未读取函数参数时引发错误。*/
+    // "exactOptionalPropertyTypes": true, /*解释可选的属性类型,而不是添加‘undefined’。*/
+    // "noImplicitReturns": true, /*在函数中没有显式返回的代码路径启用错误报告。*/
+    // "noFallthroughCasesInSwitch": true, /*在switch语句中启用倒掉案例的错误报告。*/
+    // "noUncheckedIndexedAccess": true, /*使用索引访问类型时添加‘undefined’。*/
+    // "noImplicitOverride": true, /*确保派生类中的重写成员被标记为重写修饰符。*/
+    // "noPropertyAccessFromIndexSignature": true, /*对使用索引类型声明的密钥强制使用索引访问器。*/
+    // "allowUnusedLabels": true, /*关闭未使用标签的错误报告功能。*/
+    // "allowUnreachableCode": true, /*禁用不可达代码的错误报告。*/
+
+    /* 完整性 */
+    // "skipDefaultLibCheck": true, /*跳过类型检查。TypeScript中包含的ts文件。*/
+  }
+}
