@@ -1,7 +1,7 @@
 {
   "name": "style-plus",
   "type": "module",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "packageManager": "pnpm@9.12.3",
   "description": "Enhanced style attribute, supporting CSS nesting syntax | 增强style属性，支持CSS嵌套语法",
   "author": "tofu-xx <tofu-xx@foxmail.com>",
