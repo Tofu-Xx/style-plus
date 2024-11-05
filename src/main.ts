@@ -1,8 +1,8 @@
 function getSelector(el: Element) {
-  let path: string = ''
+  let path = ''
   while (el && el.nodeType === Node.ELEMENT_NODE) {
     let tagName = el.tagName.toLowerCase()
-    const siblings = el.parentElement ? [...el.parentElement.children].filter(child => child.tagName === el.tagName) : []
+    const siblings = el.parentNode ? [...el.parentNode.children].filter(child => child.tagName === el.tagName) : []
     const index = siblings.indexOf(el) + 1
     tagName += `:nth-of-type(${index})`
     path = tagName + (path ? `>${path}` : '')

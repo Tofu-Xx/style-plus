@@ -27,6 +27,7 @@
   ],
   "scripts": {
     "build": "tsup",
+    "watch": "tsup --watch",
     "release": "bumpp -no-push && pnpm publish",
     "up": "taze major -I",
     "lint": "eslint .",
