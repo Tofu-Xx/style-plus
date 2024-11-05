@@ -17,12 +17,13 @@
   "sideEffects": false,
   "exports": {
     ".": {
-      "import": "./main.js"
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.esm.js"
     }
   },
-  "main": "main.js",
+  "main": "./dist/index.iife.js",
   "files": [
-    "main.js"
+    "dist"
   ],
   "scripts": {
     "build": "tsup",
