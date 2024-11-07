@@ -1,15 +1,4 @@
-function getSelector(el: Element) {
-  let path = ''
-  while (el?.nodeType === Node.ELEMENT_NODE) {
-    let tagName = el.localName
-    const siblings = el.parentNode ? [...el.parentNode.children].filter(child => child.tagName === el.tagName) : []
-    const index = siblings.indexOf(el) + 1
-    tagName += `:nth-of-type(${index})`
-    path = tagName + (path ? `>${path}` : '')
-    el = el.parentElement
-  }
-  return path
-}
+import { getSelector } from './getSelector'
 
 const csss = new Set()
 const sheet = new CSSStyleSheet()
@@ -24,7 +13,6 @@ new MutationObserver((mutations) => {
       if (!/\{|\}/.test(style))
         continue
       node.removeAttribute('style')
-      // const css = style.replace('&', getSelector(node))
       const css = `${getSelector(node)}{${style}}`
       if (csss.has(css))
         continue
