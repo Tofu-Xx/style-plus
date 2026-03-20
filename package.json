@@ -38,6 +38,7 @@
     "access": "public"
   },
   "dependencies": {
+    "build": "^0.1.4",
     "up": "^1.0.2"
   },
   "devDependencies": {

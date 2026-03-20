@@ -9,10 +9,15 @@
  */
 export function getSelector(el: Element) {
   let path = ''
-  while (el?.nodeType === Node.ELEMENT_NODE) {
+  while (el !== document.body) {
     let tagName = el.localName
-    const siblings = el.parentNode ? [...el.parentNode.children].filter(child => child.tagName === el.tagName) : []
-    const index = siblings.indexOf(el) + 1
+    let index = 1
+    const prevEl = el.previousElementSibling
+    do {
+      if (prevEl?.localName === el.localName) {
+        index++
+      }
+    } while (prevEl?.previousElementSibling)
     tagName += `:nth-of-type(${index})`
     path = tagName + (path ? `>${path}` : '')
     el = el.parentElement

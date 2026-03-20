@@ -22,7 +22,6 @@ new MutationObserver((mutations) => {
   }
 }).observe(document.documentElement, {
   subtree: true,
-  attributes: true,
   attributeFilter: ['style'],
   childList: true,
 })
